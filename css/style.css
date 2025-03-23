@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* ----- base ----- */
+html {
+ font-size: 16px; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: 'Averia Serif Libre','Hiragino Mincho ProN' ,serif;
+  background-color: #565656;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* ----- header ----- */
+.header {
+  text-align: center;
+  align-items: center;
+  color: #FFF;
+  padding: 25px 16px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 16px;
+}
+
+/* ハンバーガーメニュー */
+.header-hum-btn {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-hum-btn span {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+
+.header-hum-line1 {
+  
+}
+
+
+
+/* ----- section-title ----- */
+
+  h3 {
+    
+  }
+
+
+
+/* ----- section ----- */
+
+  .section-wrapper{
+    padding:100px 10% 50px; 
+  }
+
+
+
+
+
+
+/* ----- footer ----- */
+
+footer {
+    background-color: #333;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  @media screen and (max-width:768px){
+  
+
+
+    }
