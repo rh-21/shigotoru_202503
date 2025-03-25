@@ -2,6 +2,7 @@
 /* ----- base ----- */
 html {
  font-size: 16px; 
+
 }
 
 * {
@@ -10,11 +11,13 @@ html {
 
 body {
   color: #333;
-  line-height: 1.5;
+  line-height: 1.8rem;
   font-size: 1rem;
   font-family: 'Averia Serif Libre','Hiragino Mincho ProN' ,serif;
-  background-color: #565656;
   text-align: center;
+  background-image: url(/img/bg-pattern.jpg);
+  background-repeat: repeat;
+  
 }
 
 a {
@@ -33,63 +36,378 @@ li {
 
 
 /* ----- header ----- */
-.header {
-  text-align: center;
-  align-items: center;
-  color: #FFF;
-  padding: 25px 16px;
+.header{
+  width: 100%; 
+  padding: 2rem 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
-.header-inner {
+.header-inner{
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
+.logo a{
   font-size: 16px;
+  color: #fff;
 }
 
-/* ハンバーガーメニュー */
-.header-hum-btn {
+/* ハンバーガーボタン */
+.header-hum {
+  position: absolute; /* header内で絶対配置 */
+  top: 20px;
+  right: 20px;
+  display: block;
   width: 66px;
   height: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.header-hum-btn span {
-  position: relative;
+.header-hum span {
   display: block;
+  height: 1px;
   width: 30px;
-  height: 2px;
-  background-color: #333;
-  border-radius: 4px;
-  transition: all .5s;
+  background-color: #fff;
+  margin: 0 auto;
+  transition: 1s;
 }
 
-.header-hum-line1 {
-  
+.header-hum span:nth-child(1) {
+  margin-bottom: 8px;
 }
 
+.header-hum span:nth-child(2) {
+  margin-top: 8px;
+}
+
+
+/* ハンバーガーボタン active */
+.header-hum.active span:nth-child(1) {
+   transform: rotate(20deg) translateY(5px);
+}
+
+.header-hum.active span:nth-child(2) {
+   transform: rotate(-20deg) translateY(-5px);
+}
+
+
+/* ナビゲーション */
+.header_nav {
+  transform: translateX(100vw);
+  transition: all .3s linear;
+}
+
+.header_nav ul {
+  opacity: 0;
+}
+
+
+/* ナビゲーション active */
+.header_nav.active{
+  background-color: #5a371467;
+  transition: ease .4s;  
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  align-items: center;
+  transform: translateX(0);
+}
+
+.header_nav ul {
+  position: relative;
+  background-color: #231507;
+  float: right;
+  width: 80%;
+  height: 100vh;
+  padding: 140px;
+  opacity: 1;
+}
+
+.header_nav li {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.header-sns {
+  display: flex;
+  gap: 36px;
+}
+
+.header-icon{
+  height: 36px;
+  width: auto;
+}
+
+.header-nav-item {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.header-contact {
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  padding: 16px 84px;
+}
+
+
+/* ----- KV ----- */
+.kv {
+  width: 100vw;
+  height: 680px;
+  background-image: url(/img/KV.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.kv-textbox {
+  color: #fff;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kv-en {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
 
 
 /* ----- section-title ----- */
 
-  h3 {
-    
-  }
+.section-title {
+  font-size: 2.625rem;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
 
 
+/* ----- inner ----- */
+.inner-960 {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 
-/* ----- section ----- */
+.inner-1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
 
-  .section-wrapper{
-    padding:100px 10% 50px; 
-  }
+/* ----- ボタン viewmore ----- */
+.btn-viewmore a {
+  margin-top: 36px;
+  font-family: "Hiragino Mincho ProN";
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border: 1px solid #333;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 240px;
+  padding: 10px 23px;
+  cursor: pointer;
+  z-index:999;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.btn-viewmore a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  width: 60px;
+  height: 1px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.btn-viewmore a:hover::after {
+  animation: OutIn-Line 700ms;
+  transition: all 0.3s;
+}
+
+@keyframes OutIn-Line {
+    0% {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        -webkit-transform-origin: 100% 0;
+        transform-origin: 100% 0
+    }
+
+    50% {
+        -webkit-transform: scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+        -webkit-transform-origin: 100% 0;
+        transform-origin: 100% 0
+    }
+
+    50.1% {
+        -webkit-transform: scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0
+    }
+
+    100% {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0
+    }
+}
 
 
+/* ----- concept ----- */
+.concept-wap{
+  display: flex;
+  justify-content: space-between;
+  margin: 110px auto;
+}
 
+.concept-text{
+  text-align: left;
+  line-height: 2rem;
+}
+
+
+/* ----- healthyfood ----- */
+
+#HealthyFood {
+  position: relative;
+}
+
+.healthyfood-wap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.healthyfood-wap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background: #6C4D38;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+
+.healthyfood-textbox {
+  width: 30%;
+  text-align: left;
+  margin: auto 0;
+}
+
+.healthyfood-img {
+  width: 70%;
+}
+
+
+/* ----- menu ----- */
+.menu-wap {
+  display: flex;
+  text-align: left;
+  margin: 130px auto;
+}
+
+.menu-textbox {
+  width: 35%;
+  margin: auto;
+}
+
+/* スライダーの親要素 */
+.menu-slick {
+  max-width: 65%; /* 親要素の幅を超えない */
+  position: relative; /* 矢印の配置のため */
+  height: auto;
+}
+
+/* スライドアイテム */
+.menu-item {
+  max-width: 300px; /* 画像サイズの上限 */
+  margin: 0 auto; /* 中央配置 */
+  margin-right: 24px;
+}
+
+.menu-item img {
+  width: 100%; /* 親要素に合わせる */
+  height: auto; /* アスペクト比維持 */
+}
+
+/* Slickの矢印とドットの表示調整 */
+.prev-arrow ,.next-arrow  {
+  width: 38px;
+  height: fit-content;
+  margin: auto;
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* -----about ----- */
+#about {
+  position: relative;
+}
+
+.about-bg {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+.about-textbox {
+  position: absolute;
+  top: 250px;
+  color: #fff;
+  width: 100%;
+  background-color: #5a3714;
+  z-index: 5;
+  padding: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-title {
+  letter-spacing: 0.1rem;
+}
+
+.about-text {
+margin-bottom: 24px;
+}
+
+.about-link {
+  color: #fff;
+  margin-top: 36px;
+  font-family: "Hiragino Mincho ProN";
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border: 1px solid #fff;
+  display: block;
+  position: relative;
+  max-width: 240px;
+  padding: 10px 23px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 
@@ -108,3 +426,5 @@ footer {
 
 
     }
+
+
