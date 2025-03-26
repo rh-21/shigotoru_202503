@@ -9,6 +9,8 @@ ham.on("click", function () {
 });
 
 
+
+
 $(document).ready(function () {
   $(".menu-slick").slick({
     dots: false, // ページネーション（●●●）
@@ -16,8 +18,9 @@ $(document).ready(function () {
     slidesToScroll: 1, // 1つずつスクロール
     autoplay: true, // 自動スクロール
     arrows: true, // 左右の矢印を表示
-    prevArrow: '<img src="/img/arrow.png" class="slide-arrow prev-arrow">',
-    nextArrow: '<img src="/img/arrow.png" class="slide-arrow next-arrow">',
+    prevArrow: '<img src="/img/arrow.png" class="prev-arrow">',
+    nextArrow:'<img src="/img/arrow.png" class="next-arrow">',
+    swipe:	true,
   });
 });
 
