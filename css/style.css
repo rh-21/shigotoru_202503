@@ -50,47 +50,34 @@ li {
 
 
 /* ----- header ----- */
-.header{
-  /* 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: auto; */
-}
-
-.header-inner{
-  width: 100%; 
-  padding: 2rem 2.5rem;
-  position: absolute;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-}
 
 .logo a{
   font-size: 1rem;
-  color: #fff;
+  color: #6C4D38;
+  top: 40px;
+  left: 40px;
+  position: absolute;
 }
 
 /* ハンバーガーボタン */
 .header-hum {
   position: fixed; /* header内で絶対配置 */
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
   display: block;
   width: 66px;
   height: 66px;
-  border: 1px solid #fff;
+  border: 1px solid #6C4D38;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 9999;
 }
 
 .header-hum span {
   display: block;
   height: 1px;
   width: 30px;
-  background-color: #fff;
+  background-color: #6C4D38;
   margin: 0 auto;
   transition: 1s;
 }
@@ -130,6 +117,7 @@ li {
   top: 0;
   width: 100vw;
   height: 100vh;
+    z-index: 9998;
 }
 
 .header_nav ul {
@@ -401,9 +389,9 @@ li {
   margin-right: 24px;
 }
 
-.menu-item img {
-  width: 100%; /* 親要素に合わせる */
-  height: auto; /* アスペクト比維持 */
+.menu-item img {/* 親要素に合わせる */
+  width: 300px;
+  height: 300px; /* アスペクト比維持 */
 }
 
 .slick-slider {
@@ -620,8 +608,10 @@ footer {
 
 .footer-com-name {
   color: #FFF;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
+  text-align: left;
+  margin-right: 8px;
 }
 
 .footer-com-ac {
@@ -691,6 +681,10 @@ footer {
   padding: 56px 30px 0;
 }
 
+.footer-com-name {
+  text-align: center;
+}
+
 .footer-contents{
   flex-direction: column;
   text-align: center;
@@ -700,6 +694,7 @@ footer {
 .footer-com-ac {
   margin: 30px 0;
   font-size: 1rem;
+  text-align: center;
 }
 
 .footer_nav ul {
@@ -725,9 +720,31 @@ footer {
  padding: 24px 0 24px 0;
 }
 
-
 }
 
+
+/*********************************
+下層ページ フッター
+*********************************/
+
+
+.lower_footer {
+  margin-top: 240px;
+}
+
+.lower-footer-0 {
+  margin-top: 0;
+}
+
+@media screen and (max-width:768px){
+.lower_footer {
+  margin-top: 80px;
+}
+
+.lower-footer-0 {
+  margin-top: 0;
+}
+}
 
 
 /*********************************
@@ -735,28 +752,49 @@ Home
 *********************************/
 
 .home {
-  margin: 160px auto ;
-  position: relative;
   padding: 0;
 }
 
 .home_title {
-font-size: 5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  margin: 160px auto 86px auto;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .home-text {
   margin: 64px 0;
 }
 
-.home-img {
-  position: absolute;
-  right: 0;
-  max-width: calc(100% - (50% - 600px));
-  padding-left: 30px;
+/* 右によらないーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー~ー */
+
+.home--img-wrap {
+  text-align: right;
 }
+
+.home--img {
+  max-width: calc(100% - (50% - 600px));
+  margin-right: 0;
+  display: block;
+}
+
+@media screen and (max-width:768px){
+.home_title {
+  margin: 120px auto 16px auto;
+  font-size: 4rem;
+}
+
+.home-text {
+  margin: 16px 0;
+}
+
+.home--img {
+  width: 100%;
+  height: 480px;
+}
+}
+
 
 /*********************************
 Healthy Food
@@ -764,4 +802,258 @@ Healthy Food
 
 .hf--point {
   margin-top: 0;
+}
+
+.hf--point ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hf--point-item {
+  width: 48%;
+  border-top: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.hf--point-title {
+  display: flex;
+  margin: 48px auto 48px 0;
+}
+
+.hf--point-num {
+  color: #333;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.hf--point-maintitle {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.hf--point-text {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 24px;
+}
+
+/* 画像を下のラインに揃えたいーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー~ー */
+
+.hd--point-img  {
+  margin-bottom: 0;
+}
+
+.hf--text {
+  margin-top: 110px;
+} 
+
+
+@media screen and (max-width:768px){
+.hf--point ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.hf--point-item {
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+
+.hf--point-title {
+  display: flex;
+  margin: 24px auto 24px 0;
+}
+
+.hf--text {
+  margin-top: 16px;
+} 
+
+}
+
+/*********************************
+menu
+*********************************/
+
+.menu--list ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.menu--list-item {
+  width: 48%;
+  border-top: 1px solid #333;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin-bottom: 80px;
+}
+
+.menu--item-img {
+  
+}
+
+.menu--list-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.menu--list-maintitle {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@media screen and (max-width:768px){
+.menu--list ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu--list-item{
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+
+.menu--list-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+}
+
+
+/*********************************
+About
+*********************************/
+
+.about-text {
+  margin: 80px auto;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+.company--wrap {
+  background-color: #6C4D38;
+  display: flex;
+  
+}
+
+.company--title {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.6rem;
+  margin: 86px 106px;
+  font-family: "Hiragino Mincho ProN";
+  color: #fff;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* 会社概要 リスト */
+.company--list {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 62px;
+  margin-bottom: 62px;
+}
+
+
+.company--list td, 
+.company--list th {
+  border-bottom: 0.5px solid #ffffff5e;
+  padding: 24px 0;
+  font-family: "Hiragino Mincho ProN";
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 1.8px;
+}
+
+.company--list th {
+  width: 25%;
+  
+}
+
+/* sp */
+@media only screen and (max-width: 768px) {
+
+  .about-text p br{
+    display: none;
+  }
+
+
+  .company--wrap {
+  display: block;
+  padding: 30px;
+  }
+
+  .company--title {
+  writing-mode: horizontal-tb;
+  margin: 24px 0 ;
+  font-size: 2rem;
+  }
+  .company--list {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  }
+
+  .company--list th,
+  .company--list td {
+    width: 100%;
+    display: block;
+  }
+
+  .company--list th {
+    border-bottom: none;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  .company--list th {
+    
+  }
+
+  .company--list td {
+    padding-top: 0;
+  }
+
+  
+}
+
+
+/*********************************
+Recruit
+*********************************/
+
+.recruit-subtite {
+    font-family: "Hiragino Mincho ProN";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.recruit-text p{
+  margin-bottom: 16px;
+}
+
+/* sp */
+@media only screen and (max-width: 768px) {
+
+.recruit-text p br{
+  display: none;
+}
+
 }
