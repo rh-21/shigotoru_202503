@@ -27,6 +27,7 @@ a {
 
 img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -363,6 +364,11 @@ li {
   .healthyfood-text br {
     display: none;
   }
+
+  .healthyfood-wap::before {
+    display: block;
+    height: 100%;
+  }
 }
 
 
@@ -385,11 +391,11 @@ li {
 /* スライドアイテム */
 .menu-item {
   max-width: 300px; /* 画像サイズの上限 */
-  margin: 0 auto; /* 中央配置 */
-  margin-right: 24px;
+  margin: 0 auto;
+  margin-right: 40px; /* 中央配置 */
 }
 
-.menu-item img {/* 親要素に合わせる */
+.menu-item img {
   width: 300px;
   height: 300px; /* アスペクト比維持 */
 }
@@ -524,7 +530,7 @@ margin-bottom: 24px;
 /* ----- recruit ----- */
 .cta {
   display: flex;
-  margin-top: 200px;
+  margin: 200px auto 110px;
   gap: 1rem;
 }
 
@@ -533,12 +539,7 @@ margin-bottom: 24px;
   display: block;
   width: 100%;
   height: 100%;
-  
-}
-
-.cta-link:hover {
-  background: #6C4D38;
-  mix-blend-mode: multiply;
+  z-index: 0;
 }
 
 .cta-textbox {
@@ -719,7 +720,6 @@ footer {
 .copylight {
  padding: 24px 0 24px 0;
 }
-
 }
 
 
@@ -774,9 +774,10 @@ Home
 }
 
 .home--img {
-  max-width: calc(100% - (50% - 600px));
+  max-width: calc(100% - (50% - 570px));
   margin-right: 0;
   display: block;
+  margin-left: auto;
 }
 
 @media screen and (max-width:768px){
@@ -872,7 +873,6 @@ Healthy Food
 .hf--text {
   margin-top: 16px;
 } 
-
 }
 
 /*********************************
@@ -896,8 +896,8 @@ menu
   margin-bottom: 80px;
 }
 
-.menu--item-img {
-  
+.menu-name {
+  margin-top: 8px;
 }
 
 .menu--list-title {
@@ -919,8 +919,8 @@ menu
   flex-direction: column;
 }
 
-.menu--list-item{
-  width: 100%;
+.menu--list-item img{
+  width: 90%;
   margin-bottom: 42px;
 }
 
@@ -937,11 +937,11 @@ menu
 About
 *********************************/
 
-.about-text {
+.about--text {
   margin: 80px auto;
 }
 
-.about-text p {
+.about--text p {
   margin-bottom: 16px;
 }
 
@@ -1057,3 +1057,111 @@ Recruit
 }
 
 }
+
+
+/*********************************
+Blog
+*********************************/
+.blog--list{
+
+}
+
+.blog--list article{
+  border-bottom: 0.5px solid #333;
+  max-width: calc(100% - (40% - 200px));
+  margin-right: 0;
+  margin-left: auto;
+}
+
+
+.blog--item-link svg{
+ margin-right: 20px;
+ margin-left: 8px;
+}
+
+.blog--item-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.blog--item-contents {
+  display: flex;
+  align-items: center;
+}
+
+.blog--item-img {
+  width: 260px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.blog--item-textbox {
+  margin-left: 16px;
+}
+
+.blog--item-day  {
+  font-size: 0.8rem;
+}
+
+.blog--item-title {
+  font-family: "Hiragino Mincho ProN";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.blog--item-text {
+  font-family: "Hiragino Mincho ProN";
+  font-size: 0.8rem;
+  font-style: normal;
+  line-height: 160%;
+  opacity: 0.5;
+}
+
+/* sp */
+@media only screen and (max-width: 768px) {
+
+.blog--list{
+  padding: 30px;
+}
+
+.blog--list article{
+  border-bottom: 0.5px solid #333;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.blog--item-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: normal;
+
+}
+
+.blog--item-textbox {
+  text-align: left;
+  margin-left: 0;
+    padding-top: 16px;
+}
+
+
+.blog--item-link svg {
+  display: none;
+}
+
+.blog--item-link{
+text-align: left;
+}
+
+.blog--item-img {
+   width: 100%;
+  height: 100%;
+}
+} 
