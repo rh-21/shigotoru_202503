@@ -1205,7 +1205,7 @@ text-align: left;
 
 
 /*********************************
-Home
+blog
 *********************************/
 .blog-detail--head-wrap{
     margin: 160px 0 86px auto;
@@ -1268,4 +1268,74 @@ Home
   font-size: 1.6rem;
 }
 }
+/*********************************
+form
+*********************************/
+.contact--contents {
+    padding-left: 40px;
+    max-width: calc(100% - (50% - 350px));
+    margin-right: 0;
+    margin-left: auto;
+}
 
+form ,.contact--text  {
+    max-width: 840px;
+}
+
+.contact--text {
+  margin-bottom: 40px;
+}
+
+.form--name {
+  display: flex;
+  gap: 8px;
+}
+
+.form label {
+  font-family: "Hiragino Mincho ProN";
+  display: block;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.form label span {
+  color: #DD3A3A;
+}
+
+.form input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 0.5px solid #333;
+    background: #FFF;
+}
+
+.form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form button:hover {
+    background-color: #333;
+}
+
+.form button[type="button"] {
+    background-color: #ddd;
+    color: black;
+}
+
+.form button[type="button"]:hover {
+    background-color: #bbb;
+}

@@ -46,7 +46,7 @@
                         <a><img src="./img/ico-instagram.png" alt="Instagram" class="header-icon"></a>
                         <a><img src="./img/ico-twitter.png" alt="Twitter" class="header-icon"></a>
                     </li>
-                    <li><button class="header-contact"><a href="contact.html">CONTACT</a></button></li>
+                    <li><button class="header-contact">CONTACT</button></li>
                 </ul>
             </nav>
             <!-- ボタン -->
@@ -62,63 +62,48 @@
     <main>
         <div class="home">
             <div class="home-text-wrap inner-1200">
-                <h2 class="home_title">About</h2>
-                <p class="home-text">
-                    NATURAL KITCHEN は、心と体にやさしいオーガニックフードとドリンクを提供するカフェです。<br>
-                    私たちは、自然の恵みを大切にし、厳選したオーガニック食材を使用したメニューで、<br>
-                    皆さまに健康的で美味しいひとときをお届けしています。                </p>
-            </div>
-            <div class="home--img-wrap">
-                <img class="home--img" src="/img/about-kv.jpg" alt="">
+                <h2 class="home_title">Contact</h2>
             </div>
         </div>
 
-        <section class="about--text inner-1200">
-            <p>店内は木の温もりを感じる落ち着いた空間で、ナチュラルな雰囲気に包まれながら、ゆったりとした時間を過ごしていただけます。
-            カラダに優しいオーガニックコーヒーやハーブティー、季節の食材を使ったこだわりのスムージー、
-            新鮮な野菜をふんだんに使用したサラダやプレートメニューなど、心も満たされる料理をご用意しています。
-            </p>
-            <p>
-            忙しい日常の中で、少しだけ立ち止まり、自然の味わいを楽しむひとときはいかがでしょうか。
-            NATURAL KITCHEN で、オーガニックの美味しさと、心地よい時間をお楽しみください。
-            </p>
-        </section>
-
-        <!-- company -->
-        <section id="company" class="company">
-            <div class="company--wrap">
-                <h3 class="company--title">店舗概要</h3>
-                <table class="company--list">
-                    <tr>
-                        <th>店名</th>
-                        <td>NATURAL KITCHEN</td>
-                    </tr>
-                    <tr>
-                        <th>設立</th>
-                        <td>Napoleon Dynamite</td>
-                    </tr>
-                    <tr>
-                        <th>代表取締役</th>
-                        <td>〒150-0021　東京都渋谷区恵比寿西1-2-3</td>
-                    </tr>
-                    <tr>
-                        <th>アクセス</th>
-                        <td>東急東横線「代官山」駅、1番出口より南へ徒歩6分</td>
-                    </tr>
-                    <tr>
-                        <th>所在地</th>
-                        <td>〒540-0031 大阪市中央区北浜東1-22 北浜東野村ビル4F</td>
-                    </tr>
-                    <tr>
-                        <th>アクセス</th>
-                        <td> 大阪メトロ 谷町線・京阪電車「天満橋」駅、2番出口より徒歩6分 </td>
-                    </tr>
-                </table>
+        <div class="contact--contents">
+            <div class="contact--text">
+                当店へのご質問やご相談がございましたら、お気軽にお問い合わせください。メニューやサービスに関するご不明点、イベントのご予約、採用情報など、さまざまなご相談を承っております。<br>
+            
+                お問い合わせは、専用のフォームより受け付けております。<br>
+                必要事項をご入力のうえ、送信ボタンを押してください。内容を確認し、担当者より折り返しご連絡いたします。<br>
+                なお、お問い合わせの内容によっては、ご返信にお時間をいただく場合がございますので、あらかじめご了承ください。<br>
+            
+                皆さまからのご連絡をお待ちしております。
             </div>
-        </section>
+            <form action="" method="post" class="form">
+                <label for="last-name">氏名<span>*</span></label>
+                <div class="form--name">
+                    <input type="text" id="last-name" name="last-name" placeholder="姓" required>
+                    <input type="text" id="first-name" name="first-name" placeholder="名" required>
+            
+                </div>
+                <br><br>
+            
+                <label for="email">メールアドレス<span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="sample@natural-kitchen.com" required>
+                <br><br>
+            
+                <label for="phone">電話番号</label>
+                <input type="tel" id="phone" name="phone" placeholder="000-00000-0000">
+                <br><br>
+            
+                <label for="message">お問い合わせ内容<span>*</span></label>
+                <textarea id="message" name="message" required></textarea>
+                <br><br>
+            
+                <button type="button" onclick="history.back()">送信</button>
+            </form>
+        </div>
+        
     </main>
 
-    <footer id="footer" class="lower_footer lower-footer-0">
+    <footer id="footer" class="lower_footer">
         <div class="footer-contents">
             <div class="footer-com">
                 <h4 class="footer-com-name">NATURAL KITCHEN</h4>
