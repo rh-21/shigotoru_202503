@@ -60,6 +60,7 @@ li {
   position: absolute;
 }
 
+
 /* ハンバーガーボタン */
 .header-hum {
   position: fixed; /* header内で絶対配置 */
@@ -72,6 +73,7 @@ li {
   border-radius: 50%;
   cursor: pointer;
   z-index: 9999;
+  transition: 1s;
 }
 
 .header-hum span {
@@ -93,42 +95,71 @@ li {
 
 
 /* ハンバーガーボタン active */
+
+.header-hum.active {
+  border: 1px solid #fff;
+}
+
+.header-hum.active span {
+  background-color: #fff;
+}
+
+
 .header-hum.active span:nth-child(1) {
-   transform: rotate(20deg) translateY(5px);
+   transform: rotate(20deg);
+   
 }
 
 .header-hum.active span:nth-child(2) {
-   transform: rotate(-20deg) translateY(-5px);
+   transform: rotate(-20deg);
+}
+
+.header-hum.active span:nth-child(1) {
+  margin-bottom: 0;
+}
+
+.header-hum.active span:nth-child(2){
+  margin-top: 0;
 }
 
 
 /* ナビゲーション */
-.header_nav {
-  display: none;
-}
-
-
-/* ナビゲーション active */
-.header_nav.active{
-  display: block;
-  position: fixed;
-  background-color: #5a371467;
-  right: 0;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-    z-index: 9998;
-}
-
-.header_nav ul {
+.header_nav ul{
+  transform: translateX(100%);
+  transition: 1s;
   display: block;
   position: relative;
   background-color: #231507;
   float: right;
   width: 80%;
-  height: 100vh;
+  height: 100%;
   padding: 140px;
+}
+
+.header_nav {
+  background-color: #5a371467;
+  display: block;
+  position: fixed;
+
+  opacity: 0;
+  transition: 1s;
+  z-index: 9998;
+  opacity: 0;
+}
+
+/* ナビゲーション active */
+
+.header_nav.active{
+  opacity: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header_nav.active ul {
+  transform: translateX(0%);
   opacity: 1;
 }
 
@@ -230,7 +261,8 @@ li {
 }
 
 /* ----- ボタン viewmore ----- */
-.btn-viewmore a {
+.btn-viewmore a,
+.btn-backpage a {
   margin-top: 36px;
   font-family: "Hiragino Mincho ProN";
   font-size: 0.8rem;
@@ -246,7 +278,8 @@ li {
   transition: all 0.3s;
 }
 
-.btn-viewmore a::after {
+.btn-viewmore a::after ,
+.btn-backpage a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -255,9 +288,11 @@ li {
   height: 1px;
   background: #333;
   transition: all 0.3s ease;
+  margin-right: 8px;
 }
 
-.btn-viewmore a:hover::after {
+.btn-viewmore a:hover::after
+,.btn-backpage a:hover::after {
   animation: OutIn-Line 700ms;
   transition: all 0.3s;
 }
@@ -1165,3 +1200,72 @@ text-align: left;
   height: 100%;
 }
 } 
+
+
+
+
+/*********************************
+Home
+*********************************/
+.blog-detail--head-wrap{
+    margin: 160px 0 86px auto;
+    padding-left: 40px;
+    max-width: calc(100% - (50% - 570px));
+}
+
+.blog-detail--head-textbox{
+  border-bottom: 0.5px solid #333;
+}
+
+.blog-detail--day {
+  font-size: 1.2rem;
+  margin-bottom: 42px;
+  display: block;
+}
+
+.blog-detail--head-text {
+  font-size: 2rem;
+  font-family: "Hiragino Mincho ProN";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+  text-align: left;
+  margin-bottom: 42px;
+}
+
+.blog-detail--contents {
+  margin: 54px auto 54px 0;
+  max-width: 1200px;
+  padding-right: 30px;
+}
+
+.blog-detail--thumbnail {
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.blog-detail--contents p{
+  font-size: 0.9rem;
+}
+
+.blog-link{
+   padding-left: 40px;
+    max-width: calc(100% - (50% - 570px));
+    margin-right: 0;
+    margin-left: auto;
+}
+
+@media screen and (max-width:768px){
+  .blog-detail--day {
+  font-size: 0.8rem;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.blog-detail--head-text {
+  font-size: 1.6rem;
+}
+}
+
