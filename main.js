@@ -11,16 +11,24 @@ $(document).ready(function () {
   });
 
   // スクロール時の処理
-  // $(window).on("scroll", function () {
-  //   let scrollTopDistance = $(window).scrollTop();
-  //   let kvAnimationHeight = $("#kv-animation").outerHeight(true);
+  if ($("div").hasClass("home")) {
+    $("#js-hamburger").removeClass("hum-color");
+  }
+  
+  $(window).on("scroll", function () {
+    let scrollTopDistance = $(window).scrollTop();
+    let kvAnimationHeight = $(".kv").outerHeight(true);
 
-  //   if (scrollTopDistance >= kvAnimationHeight) {
-  //     $("#js-hamburger").addClass("hum-color");
-  //   } else {
-  //     $("#js-hamburger").removeClass("hum-color");
-  //   }
-  // });
+    if (scrollTopDistance <= kvAnimationHeight) {
+      // 茶色になる
+      $("#js-hamburger").addClass("hum-color");
+      console.log("1つ目");
+    } else {
+      // 白になる
+      $("#js-hamburger").removeClass("hum-color");
+      console.log("2");
+    }
+  });
 
   // slickの初期化
   $(".menu-slick").slick({

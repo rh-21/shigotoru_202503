@@ -49,7 +49,9 @@ li {
 }
 
 
-/* ----- header ----- */
+/*********************************
+ヘッダー
+*********************************/
 
 .logo a{
   font-size: 1rem;
@@ -72,7 +74,7 @@ li {
   border-radius: 50%;
   cursor: pointer;
   z-index: 9999;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .header-hum span {
@@ -81,7 +83,7 @@ li {
   width: 30px;
   background-color: #6C4D38;
   margin: 0 auto;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .header-hum span:nth-child(1) {
@@ -121,7 +123,11 @@ li {
   margin-top: 0;
 }
 
-.hum-color span{
+.header-hum.hum-color span{
+    background-color: #fff;
+}
+
+.header-hum.hum-color {
     border: 1px solid #fff;
 }
 
@@ -132,9 +138,9 @@ li {
   transition: 1s;
   position: fixed;
   background-color: #231507;
-  float: right;
   width: 80%;
   height: 100%;
+  right: 0;
   padding: 140px;
 }
 
@@ -160,7 +166,7 @@ li {
 }
 
 .header_nav.active ul {
-  transform: translateX(30%);
+  transform: translateX(0%);
   opacity: 1;
 }
 
@@ -190,15 +196,13 @@ li {
   padding: 16px 84px;
 }
 
-
-  @media screen and (max-width:768px){
+@media screen and (max-width:768px){
 .header_nav ul{
   width: 100%;
   padding: 100px;
+  transform: translateX(0%);
 }  
 }
-
-
 
 
 /* ----- KV ----- */
@@ -331,6 +335,58 @@ li {
 }
 
 
+
+/* -----ボタン スライダーアニメーション ----- */
+.slide-btn {
+  color: #fff;
+  margin-top: 36px;
+  font-family: "Hiragino Mincho ProN";
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border: 1px solid #fff;
+  display: block;
+  position: relative;
+  max-width: 240px;
+  padding: 10px 23px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  transition: color 0.5s ease;
+  display: inline-block;
+  position: relative;
+  width: 250px;
+}
+
+.slide-btn:hover {
+  color: #5a3714;
+}
+
+.slide-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.slide-btn::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s ease;
+  transition-property: transform;
+}
+
+.slide-btn span{
+  position: relative;
+}
+
+
+
 /* ----- concept ----- */
 .concept-wap{
   display: flex;
@@ -383,8 +439,8 @@ li {
 }
 
 .healthyfood-img.pc {
-  width: 65%;
-  margin-top: -100px;
+  margin-top: -10%;
+  margin-bottom: 32px;
 }
 
 
@@ -529,23 +585,6 @@ li {
 margin-bottom: 24px;
 }
 
-.about-link {
-  color: #fff;
-  margin-top: 36px;
-  font-family: "Hiragino Mincho ProN";
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  border: 1px solid #fff;
-  display: block;
-  position: relative;
-  max-width: 240px;
-  padding: 10px 23px;
-  cursor: pointer;
-  text-align: center;
-  margin: 0 auto;
-}
-
-
 @media screen and (max-width:768px){
   .about-bg  {
     width: 100%;
@@ -666,9 +705,7 @@ footer {
   text-align: left;
 }
 
-.footer-contact {
-  margin-left: auto; /* 右側に寄せる */
-}
+
 
 .footer_nav ul{
   display: flex;
@@ -707,10 +744,64 @@ footer {
   padding: 12px 84px;
   cursor: pointer;
   text-align: center;
+  transition: color 0.5s ease;
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 auto;
+}
+
+/* .slide-btn ,.footer-contact {
+
+  margin-top: 36px;
+  font-family: "Hiragino Mincho ProN";
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border: 1px solid #fff;
+  display: block;
+  position: relative;
+  max-width: 240px;
+  padding: 10px 23px;
+  cursor: pointer;
+  text-align: center;
+  width: 250px;
+} */
+
+.footer-contact:hover {
+  color: #fff;
+}
+
+.footer-contact:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.footer-contact::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  border: 1px solid #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s ease;
+  transition-property: transform;
+}
+
+.footer-contact span{
+  position: relative;
+}
+
+.contct-wrap{
+  text-align: right;
+  margin-top: 24px;
 }
 
 .copylight {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   text-align: center;
   border-top: 0.5px solid #ffffff40;
   padding: 24px;
@@ -810,8 +901,6 @@ Home
   margin: 64px 0;
 }
 
-/* 右によらないーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー~ー */
-
 .home--img-wrap {
   text-align: right;
 }
@@ -884,8 +973,6 @@ Healthy Food
   line-height: 1.5rem;
   margin-bottom: 24px;
 }
-
-/* 画像を下のラインに揃えたいーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー~ー */
 
 .hd--point-img  {
   margin-bottom: 0;
