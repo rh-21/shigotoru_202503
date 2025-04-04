@@ -18,14 +18,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
 
     <!-- スタイルシートの読み込みのための記述です -->
-    <link rel="stylesheet" href="./css/ress.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/ress.css" />
+    <link rel="stylesheet" href="/style.css" />
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
+    <!-- header -->
     <!-- header -->
     <header class="header">
         <div class="header-inner">
@@ -60,45 +61,34 @@
 
     <!-- fv -->
     <main>
-        <div class="home">
-            <div class="home-text-wrap inner-1200">
-                <h2 class="home_title">Contact</h2>
-            </div>
-        </div>
-
-        <div class="contact--contents">
-            <div class="contact--text">
-                当店へのご質問やご相談がございましたら、お気軽にお問い合わせください。メニューやサービスに関するご不明点、イベントのご予約、採用情報など、さまざまなご相談を承っております。<br>
-
-                お問い合わせは、専用のフォームより受け付けております。<br>
-                必要事項をご入力のうえ、送信ボタンを押してください。内容を確認し、担当者より折り返しご連絡いたします。<br>
-                なお、お問い合わせの内容によっては、ご返信にお時間をいただく場合がございますので、あらかじめご了承ください。<br>
-
-                皆さまからのご連絡をお待ちしております。
-            </div>
-            <form id="form" class="form">
-                <label for="last-name">氏名<span>*</span></label>
-                <div class="form--name">
-                    <input type="text" id="last-name" name="last-name" placeholder="姓" required>
-                    <input type="text" id="first-name" name="first-name" placeholder="名" required>
+        <article class="blog-detail--head-wrap">
+            <div class="blog-detail--head">
+                <div class="blog-detail--head-textbox">
+                    <time class="blog-detail--day" datetime="2025-03-01">2025.03.01</time>
+                    <h2 class="blog-detail--head-text">Webサイトのリニューアル</h2>
                 </div>
-                <br>
-                <label for="email">メールアドレス<span>*</span></label>
-                <input type="email" id="email" name="email" placeholder="sample@natural-kitchen.com" required>
-                <br><br>
+            </div>
+            <div class="blog-detail--contents">
+                <img class="blog-detail--thumbnail" src="./img/healthy-food.jpg" alt="">
+                <p>
+                    いつも当社のWebサイトをご利用いただき、誠にありがとうございます。このたび、皆さまにより快適にご利用いただけるよう、Webサイトを全面的にリニューアルいたしました。デザインの一新に加え、操作性や利便性を向上させ、より分かりやすく、使いやすいサイトへと生まれ変わりました。
 
-                <label for="phone">電話番号</label>
-                <input type="tel" id="phone" name="phone" placeholder="000-00000-0000">
-                <br><br>
+                    リニューアルのポイント
+                    今回のリニューアルでは、まずデザインを刷新し、より洗練されたビジュアルと直感的なレイアウトを採用しました。シンプルで見やすいデザインを心掛け、必要な情報をスムーズに探せるよう改善しています。また、スマートフォンやタブレットからの閲覧にも最適化し、デバイスを問わず快適にご利用いただけるようになりました。
 
-                <label for="message">お問い合わせ内容<span>*</span></label>
-                <textarea id="message" name="message" required></textarea>
-                <br><br>
+                    さらに、サイト構成を整理し、各ページの情報をより分かりやすくまとめました。新しいナビゲーションメニューを導入することで、目的のページへスムーズにアクセスできるようになっています。特に、よくお問い合わせいただく内容をまとめたFAQページや、新着情報をより分かりやすくお届けするニュースセクションなど、便利なコンテンツを強化しました。
 
-                <button id="submit" type="button">送信</button>
-            </form>
+                    また、ブログやお知らせの更新頻度を高め、最新情報やお役立ち情報を定期的に発信していきます。これにより、当社のサービスに関する最新情報をいち早くお届けし、より身近に感じていただけるよう努めてまいります。
+
+                    今回のリニューアルを通じて、皆さまにとってより使いやすく、価値あるWebサイトを提供できるようになったと考えております。今後も継続的に改善を重ね、より良い情報発信とサービス向上に努めてまいりますので、引き続きどうぞよろしくお願いいたします。
+
+                    ぜひ、新しくなったWebサイトをご覧いただき、ご意見やご感想をお聞かせください!
+                </p>
+            </div>
+        </article>
+        <div class="btn-backpage blog-link">
+            <a href="blog.html" onclick="blog.back()">Back page</a>
         </div>
-
     </main>
 
     <footer id="footer" class="lower_footer">

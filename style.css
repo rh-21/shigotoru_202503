@@ -1,8 +1,18 @@
+/*
+Theme Name: natural kitchen
+Theme URI: https://www.naturalkitchen.net/
+Description: シゴトル3月課題
+Version: 1.0.0
+Author: AKIBA
+Author URI: https://www.sejuku.net/
+*/
+
 @charset "UTF-8";
 /* ----- base ----- */
 html {
  font-size: 16px; 
 }
+
 
 * {
   box-sizing: border-box;
@@ -14,7 +24,7 @@ body {
   font-size: 1rem;
   font-family: 'Averia Serif Libre','Hiragino Mincho ProN' ,serif;
   text-align: left;
-  background-image: url(/img/bg-pattern.jpg);
+  background-image: url(img/bg-pattern.jpg);
   background-repeat: repeat;
   font-style: normal;
 }
@@ -23,6 +33,7 @@ a {
   text-decoration: none;
   color: #333;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 img {
@@ -46,6 +57,10 @@ li {
 .pc{
   display: none;
 }
+}
+
+a:hover{
+  opacity: 0.5;
 }
 
 
@@ -200,7 +215,7 @@ li {
 .header_nav ul{
   width: 100%;
   padding: 100px;
-  transform: translateX(0%);
+  transform: translateX(100%);
 }  
 }
 
@@ -209,7 +224,7 @@ li {
 .kv {
   width: 100vw;
   height: 100vh;
-  background-image: url(/img/KV.jpg);
+  background-image: url(img/KV.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-size: cover;
@@ -233,9 +248,6 @@ li {
   line-height: 4rem;
 }
 
-
-
-
 /* ----- section-title ----- */
 
 .section-title {
@@ -253,6 +265,46 @@ li {
 }   
 }
 
+/* スクロールダウンの位置 */
+.scroll {
+  position: absolute;
+  right: 50%;
+  bottom: 100px;
+  color: #fff;
+  opacity: 0.7;
+}
+/* 線のアニメーション部分 */
+.scroll::before {
+  animation: scroll 2s infinite;
+  background-color: #fff;
+  bottom: -65px;
+  content: "";
+  height: 50px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 1px;
+}
+/* 線のアニメーション */
+@keyframes scroll {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+}
 
 /* ----- inner ----- */
 .inner-960 {
@@ -268,6 +320,10 @@ li {
 }
 
 /* ----- ボタン viewmore ----- */
+.btn-backpage {
+  margin-bottom: 180px;
+  
+}
 .btn-viewmore a,
 .btn-backpage a {
   margin-top: 36px;
@@ -284,6 +340,7 @@ li {
   z-index:100;
   transition: all 0.3s;
 }
+
 
 .btn-viewmore a::after ,
 .btn-backpage a::after {
@@ -384,8 +441,6 @@ li {
 .slide-btn span{
   position: relative;
 }
-
-
 
 /* ----- concept ----- */
 .concept-wap{
@@ -582,7 +637,7 @@ li {
 }
 
 .about-text {
-margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 @media screen and (max-width:768px){
@@ -609,6 +664,7 @@ margin-bottom: 24px;
   display: flex;
   margin: 200px auto 110px;
   gap: 1rem;
+  margin-bottom: 180px;
 }
 
 .cta-link {
@@ -681,6 +737,7 @@ footer {
   text-align: center;
   color: #fff;
   padding: 65px 65px 0 65px;
+  
 }
 
 .footer-contents {
@@ -749,22 +806,6 @@ footer {
   position: relative;
   margin: 0 0 0 auto;
 }
-
-/* .slide-btn ,.footer-contact {
-
-  margin-top: 36px;
-  font-family: "Hiragino Mincho ProN";
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  border: 1px solid #fff;
-  display: block;
-  position: relative;
-  max-width: 240px;
-  padding: 10px 23px;
-  cursor: pointer;
-  text-align: center;
-  width: 250px;
-} */
 
 .footer-contact:hover {
   color: #fff;
@@ -866,18 +907,18 @@ footer {
   margin-top: 240px;
 }
 
-.lower-footer-0 {
+/* .lower-footer-0 {
   margin-top: 0;
-}
+} */
 
 @media screen and (max-width:768px){
 .lower_footer {
   margin-top: 80px;
 }
 
-.lower-footer-0 {
+/* .lower-footer-0 {
   margin-top: 0;
-}
+} */
 }
 
 
@@ -891,7 +932,7 @@ Home
 
 .home_title {
   margin: 160px auto 86px auto;
-  font-size: 5rem;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -934,7 +975,7 @@ Healthy Food
 *********************************/
 
 .hf--point {
-  margin-top: 0;
+  margin-top: 48px;
 }
 
 .hf--point ul{
@@ -976,6 +1017,8 @@ Healthy Food
 
 .hd--point-img  {
   margin-bottom: 0;
+  margin-top: auto;
+  height: 340px;
 }
 
 .hf--text {
@@ -1009,6 +1052,7 @@ Healthy Food
 menu
 *********************************/
 
+
 .menu--list ul{
   display: flex;
   flex-wrap: wrap;
@@ -1024,6 +1068,10 @@ menu
   flex-direction: column;
   align-content: space-between;
   margin-bottom: 80px;
+}
+
+.menu--list-item img {
+  max-height: 350px;
 }
 
 .menu-name {
@@ -1186,6 +1234,10 @@ Recruit
   margin-bottom: 16px;
 }
 
+.recruit-text {
+  margin-bottom: 180px;
+}
+
 /* sp */
 @media only screen and (max-width: 768px) {
 
@@ -1200,7 +1252,7 @@ Recruit
 Blog
 *********************************/
 .blog--list{
-
+  margin-bottom: 180px;
 }
 
 .blog--list article{
@@ -1222,6 +1274,11 @@ Blog
   padding: 24px 0;
   align-items: center;
   max-width: 1000px;
+  transition: 1s;
+}
+
+.blog--item-link:hover{
+  opacity: 0.6;
 }
 
 .blog--item-contents {
@@ -1313,6 +1370,7 @@ blog
     margin: 160px 0 86px auto;
     padding-left: 40px;
     max-width: calc(100% - (50% - 570px));
+
 }
 
 .blog-detail--head-textbox{
@@ -1326,9 +1384,8 @@ blog
 }
 
 .blog-detail--head-text {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-family: "Hiragino Mincho ProN";
-  font-size: 3rem;
   font-style: normal;
   font-weight: 300;
   line-height: 160%;
@@ -1346,6 +1403,7 @@ blog
   max-width: 800px;
   height: auto;
   margin-bottom: 24px;
+
 }
 
 .blog-detail--contents p{
@@ -1357,6 +1415,7 @@ blog
     max-width: calc(100% - (50% - 570px));
     margin-right: 0;
     margin-left: auto;
+    margin-bottom: 180px;
 }
 
 @media screen and (max-width:768px){
@@ -1368,6 +1427,9 @@ blog
 
 .blog-detail--head-text {
   font-size: 1.6rem;
+}
+.blog-detail--head-wrap{
+  margin-top: 80px;
 }
 }
 /*********************************
@@ -1427,6 +1489,7 @@ form ,.contact--text  {
     width: 100%;
     margin-top: 10px;
     max-width: 400px;
+    margin-bottom: 180px;
 }
 
 .form button:hover {

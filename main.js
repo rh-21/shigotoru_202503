@@ -36,11 +36,11 @@ $(document).ready(function () {
     autoplay: true,
     arrows: true,
     prevArrow: '<img src="/img/arrow.png" class="prev-arrow">',
-    nextArrow: '<img src="/img/arrow.png" class="next-arrow">',
+    nextArrow: '<img src="<?php echo get_template_directory_uri(); ?>/img/arrow.png" class="next-arrow">',
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    centerMode: true,
+    centerMode: false,
     variableWidth: true,
   });
 });
@@ -128,7 +128,3 @@ function inputCheck() {
   return { error, message }; // 結果を返す
 }
 
-// 戻るボタンの処理
-$("#back-button").on("click", function () {
-  history.back();
-});

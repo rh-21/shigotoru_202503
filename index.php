@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+index
+<html lang="ja">
+
+<head>
+  <meta charset=" UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- サイトのアイコンを設定します -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <meta name="robots" content="noindex" />
+
+  <!-- サイトのタイトルを記述します -->
+  <title>NATURAL KITCHEN</title>
+  <!-- サイトの概要を記述します -->
+  <meta name="description" content="natural kitchenのホームページです。" />
+  <!-- Google Fontsを読み込むための記述です -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+
+  <!-- スタイルシートの読み込みのための記述です -->
+  <link rel="stylesheet" href="/ress.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo"><a href="#">NATURAL KITCHEN</a></h1>
+      <!-- ハンバーガーメニュー -->
+      <div class="header-menu">
+        <!-- メニュー -->
+        <nav class="header_nav" id="js-nav">
+          <ul>
+            <li><a class="header-nav-item" href="index.html">TOP</a></li>
+            <li><a class="header-nav-item" href="menu.html">Menu</a></li>
+            <li><a class="header-nav-item" href="blog.html">Blog</a></li>
+            <li><a class="header-nav-item" href="healthyfood.html">Healthy Food</a></li>
+            <li><a class="header-nav-item" href="about.html">About</a></li>
+            <li><a class="header-nav-item" href="recruit.html">Recruit</a></li>
+            <li class="header-sns">
+              <a><img src="./img/ico-facebook.png" alt="facebook" class="header-icon"></a>
+              <a><img src="./img/ico-instagram.png" alt="Instagram" class="header-icon"></a>
+              <a><img src="./img/ico-twitter.png" alt="Twitter" class="header-icon"></a>
+            </li>
+            <li><button class="header-contact slide-btn"><span>CONTACT</span></button></li>
+          </ul>
+        </nav>
+        <!-- ボタン -->
+        <button class="header-hum hum-color" id="js-hamburger">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- fv -->
+  <main>
+    <div class="kv" id="kv">
+      <div class="kv-textbox">
+        <h2 class="kv-en">Enjoy organic</h2>
+        <p class="kv-jp">オーガニックをお楽しみください。</p>
+      </div>
+    </div>
+    <!-- concept -->
+    <section id="concept">
+      <div class="inner-960 concept-wap">
+        <h3 class="section-title">Concept</h3>
+        <p class="concept-text">
+          こんにちは！<br>
+          私たちは創業当初から、カラダにやさしいコーヒーを提供しています。<br>
+          当店のコーヒー、フードは、全てオーガニックの物を使用しています。<br>
+          カフェインレスのコーヒーもご用意しておりますので、お気軽にお立ち寄りください。</p>
+      </div>
+    </section>
+
+    <!-- Healthy Food -->
+    <section id="HealthyFood">
+      <div class="inner-1200 healthyfood-wap">
+        <div class="healthyfood-textbox">
+          <h3 class="section-title">Healthy Food</h3>
+          <div>
+            <img src="./img/healthy-food.jpg" alt="" class="healthyfood-img sp">
+          </div>
+          <p class="healthyfood-text">
+            私たちのヘルシーフードは、<br>
+            厳選されたオーガニック食材を使用し、<br>
+            栄養バランスを考慮して調理されています。<br>
+            添加物や保存料を一切使用していません。
+          </p>
+          <div class="btn-viewmore">
+            <a class="healthyfood-link" href="healthyfood.html">View More</a>
+          </div>
+        </div>
+        <div>
+          <img src="./img/healthy-food.jpg" alt="" class="healthyfood-img pc">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu">
+      <div class=" menu-wap">
+        <div class="menu-textbox inner-1200">
+          <h3 class="section-title">Menu</h3>
+          <p class="menu-text">
+            こ当店のコーヒー、フードは、<br>
+            全てオーガニックの物を使用しています。<br>
+            お子様でも安心してお召し上がりください。
+          </p>
+          <div class="btn-viewmore pc">
+            <a class="menu-link" href="menu.html">View More</a>
+          </div>
+        </div>
+        <div class="menu-slick">
+          <div class="menu-item">
+            <img src="./img/organic-coffee.jpg" alt="" class="menu-img">
+            <p class="menu-name">商品名</p>
+          </div>
+          <div class="menu-item">
+            <img src="./img/organic-coffee.jpg" alt="" class="menu-img">
+            <p class="menu-name">商品名</p>
+          </div>
+          <div class="menu-item">
+            <img src="./img/organic-coffee.jpg" alt="" class="menu-img">
+            <p class="menu-name">商品名</p>
+          </div>
+          <div class="menu-item">
+            <img src="./img/organic-coffee.jpg" alt="" class="menu-img">
+            <p class="menu-name">商品名</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section id="about">
+      <img class="about-bg" src="./img/nk-bg.jpg" alt="" >
+      <div class="about-wap">
+        <div class="about-textbox inner-960">
+          <h3 class="section-title about-title">NATURAL KITCHEN</h3>
+          <p class="about-text">
+            NATURAL KITCHEN は、<br>
+            心と体にやさしいオーガニックフードとドリンクを提供するカフェです。
+          </p>
+          <div class="btn-viewmore-about">
+            <a class="about-link slide-btn" href="#"><span>View More</span></a>
+          </div>
+        </div>
+    </section>
+
+    <!--Link -->
+    <section id="cta" class="cta inner-1200">
+      <div class="blog">
+        <a class="blog cta-link" href="blog.html">
+          <img class="blog-img pc" src="./img/blog-bg_pc.jpg" alt="">
+          <img class="blog-img sp" src="./img/blog-bg_sp.jpg" alt="">
+          <div class="cta-textbox">
+            <h3 class="cta-title">Blog</h3>
+            <p class="cta-text">
+              私たちのブログでは、オーガニック食品や健康に関する情報、コーヒーの豆知識などを定期的に更新しています。ぜひチェックしてみてください。
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="recruit">
+        <a class="cta-link" href="recruit.html">
+          <img class="recruit-img pc" src="./img/Recruit-bg_pc.jpg" alt="">
+          <img class="recruit-img sp" src="./img/recruit-bg_sp.jpg" alt="">
+          <div class="cta-textbox">
+            <h3 class="cta-title">Recruit</h3>
+            <p class="cta-text">
+              私たちのチームに参加しませんか？NATURAL KITCHENでは、オーガニック食品や健康に関心のあるスタッフを募集しています。経験者はもちろん、未経験者も大歓迎です。
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-contents">
+      <div class="footer-com">
+        <h4 class="footer-com-name">NATURAL KITCHEN</h4>
+        <p class="footer-com-ac">
+          〒150-0021 <br>
+          東京都渋谷区恵比寿西1-2-3</p>
+      </div>
+      <div class="footer-link">
+        <nav class="footer_nav">
+          <ul>
+            <li><a class="footer-nav-item" href="index.html">TOP</a></li>
+            <li><a class="footer-nav-item" href="menu.html">Menu</a></li>
+            <li><a class="footer-nav-item" href="blog.html">Blog</a></li>
+            <li><a class="footer-nav-item" href="healthyfood.html">Healthy Food</a></li>
+            <li><a class="footer-nav-item" href="about.html">About</a></li>
+            <li><a class="footer-nav-item" href="recruit.html">Recruit</a></li>
+            <li class="footer-sns">
+              <a><img src="./img/ico-facebook.png" alt="facebook" class="footer-icon"></a>
+              <a><img src="./img/ico-instagram.png" alt="Instagram" class="footer-icon"></a>
+              <a><img src="./img/ico-twitter.png" alt="Twitter" class="footer-icon"></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contct-wrap">
+          <button class="footer-contact"><span>CONTACT</span></button>
+        </div>
+      </div>
+    </div>
+    <p class="copylight">Copyright © 2025 NATURAL KITCHEN All Rights Reserved.</p>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="./slick/slick.min.js"></script>
+  <script src="main.js"></script>
+  </body>
+  </html>
